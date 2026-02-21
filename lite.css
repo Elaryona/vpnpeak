@@ -1,0 +1,113 @@
+:root{
+  --bg:#ffffff;
+  --fg:#111;
+  --muted:#555;
+  --link:#0b57d0;
+  --border:#e5e7eb;
+  --chip:#f3f4f6;
+  --max: 980px;
+}
+
+*{box-sizing:border-box;}
+html,body{margin:0;padding:0;background:var(--bg);color:var(--fg);font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;line-height:1.6;}
+img{max-width:100%;height:auto;}
+
+/* Provider logos: keep them logo-sized (not poster-sized)
+   Applies to common naming used in this project: *-logo.* */
+img[src*="logo" i]{
+  max-height:72px;
+  width:auto;
+}
+a{color:var(--link);text-decoration:none;}
+a:hover{text-decoration:underline;}
+
+.wrap{max-width:var(--max);margin:0 auto;padding:16px;}
+.site-header{border-bottom:1px solid var(--border);background:#fff;position:sticky;top:0;z-index:10;}
+.site-header .wrap{display:flex;align-items:center;gap:14px;flex-wrap:wrap;}
+.brand{font-weight:800;font-size:20px;letter-spacing:.2px;display:flex;align-items:center;gap:10px;margin-right:0;}
+.site-logo{width:28px;height:28px;display:block;border-radius:6px;}
+.tagline{color:var(--muted);font-size:14px;margin:0;}
+.top-nav a{margin-right:14px;font-size:14px;color:var(--fg);}
+.top-nav a:hover{text-decoration:underline;}
+
+.content{padding-top:20px;padding-bottom:40px;}
+h1,h2,h3{line-height:1.2;margin:28px 0 10px;}
+h1{font-size:34px;}
+h2{font-size:24px;border-top:1px solid var(--border);padding-top:20px;margin-top:34px;}
+h3{font-size:18px;}
+p{margin:10px 0;}
+ul,ol{margin:10px 0 10px 20px;}
+li{margin:6px 0;}
+blockquote{margin:14px 0;padding:10px 14px;border-left:3px solid var(--border);background:#fafafa;color:var(--muted);}
+
+table{width:100%;border-collapse:collapse;margin:14px 0;font-size:14px;}
+th,td{border:1px solid var(--border);padding:10px;vertical-align:top;}
+th{background:#fafafa;text-align:left;}
+
+hr{border:0;border-top:1px solid var(--border);margin:22px 0;}
+
+.btn, a.btn, a.button, button, .cta, a.cta{
+  text-align:center;
+  display:inline-block;
+  padding:10px 14px;
+  border:1px solid var(--border);
+  border-radius:10px;
+  background:#111;
+  color:#fff;
+  font-weight:700;
+  text-decoration:none !important;
+  margin:8px 8px 8px 0;
+}
+a.btn:hover,a.button:hover,a.cta:hover{opacity:.9;}
+
+/* Button label split (prevents "VisitNordVPN" sticking together) */
+.btn .btn-top, .btn .btn-bottom{display:block;line-height:1.1;width:100%;}
+.btn .btn-top{font-size:12px;opacity:.9;}
+.btn .btn-bottom{font-size:15px;}
+/* secondary button if present */
+.btn-secondary, a.btn-secondary{
+  background:#fff;color:#111;
+}
+
+.note, .chip, .badge{
+  display:inline-block;
+  padding:6px 10px;
+  border:1px solid var(--border);
+  border-radius:999px;
+  background:var(--chip);
+  color:var(--muted);
+  font-size:12px;
+}
+
+.site-footer{border-top:1px solid var(--border);color:var(--muted);font-size:13px;}
+
+/* Make "pick" cards readable and keep logos compact */
+.pick-card{border:1px solid var(--border);border-radius:14px;padding:16px;margin:16px 0;background:#fff;}
+.pick-tag{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:800;margin-bottom:10px;}
+.pick-head{display:flex;align-items:center;gap:12px;flex-wrap:wrap;}
+.pick-name{margin:0;}
+.pick-logo{display:flex;align-items:center;justify-content:center;}
+.pick-logo img{max-height:56px;width:auto;}
+
+/* Keep hero image from dominating the first screen */
+.hero-img{max-height:220px;width:100%;object-fit:cover;border-radius:14px;border:1px solid var(--border);}
+/* Flatten common complex layouts to vertical flow */
+[class*="grid"],[class*="cols"],[class*="columns"],[class*="row"],[class*="cards"],[class*="tiles"],[class*="split"],[class*="hero"],[class*="panel"]{
+  display:block !important;
+}
+
+
+/* Related guide cards: make title + description readable */
+.related-guides-block .guide-card{display:flex;gap:12px;align-items:flex-start;padding:10px 12px;border:1px solid var(--border);border-radius:12px;text-decoration:none;}
+.related-guides-block .guide-card:hover{background:#fafafa;}
+.related-guides-block .guide-card .emoji{font-size:20px;line-height:1.2;flex:0 0 auto;margin-top:2px;}
+.related-guides-block .guide-card strong{display:block;font-size:16px;color:var(--fg);}
+.related-guides-block .guide-card .desc{display:block;margin-top:2px;color:var(--muted);font-size:14px;}
+
+
+@media (max-width: 560px){
+  .site-header .wrap{gap:10px;}
+  .tagline{flex-basis:100%;order:3;font-size:13px;}
+  .top-nav{flex-basis:100%;order:2;}
+  .top-nav a{margin-right:12px;}
+}
