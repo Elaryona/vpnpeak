@@ -1,6 +1,15 @@
-/best-vpn-public-wifi-us-2026    /best-vpn-public-wifi-us-2026/    301
-/best-vpn-airport-wifi-us-2026    /best-vpn-airport-wifi-us-2026/    301
-/best-vpn-public-wifi-us-2026.html    /best-vpn-public-wifi-us-2026/    301
-/best-vpn-airport-wifi-us-2026.html    /best-vpn-airport-wifi-us-2026/    301
+# 1) Pages.dev IMMER auf die echte Domain (wichtig gegen "Duplicate / canonical"!)
+https://vpn-3d3.pages.dev/* https://vpnpeak.net/:splat 301!
 
-/best-vpn-for-travel-2026 /best-vpn-for-travel-2026/ 301
+# 2) index.html auf / (saubere URLs)
+ /index.html / 301
+
+# 3) (Optional, aber sauber) doppelte Slashes vermeiden
+/*//*/ /:splat 301
+
+# 4) Deine bestehenden Redirects (.html -> Ordner)
+/best-vpn-public-wifi-us-2026      /best-vpn-public-wifi-us-2026/      301
+/best-vpn-airport-wifi-us-2026     /best-vpn-airport-wifi-us-2026/     301
+/best-vpn-public-wifi-us-2026.html /best-vpn-public-wifi-us-2026/      301
+/best-vpn-airport-wifi-us-2026.html /best-vpn-airport-wifi-us-2026/    301
+/best-vpn-for-travel-2026          /best-vpn-for-travel-2026/          301
